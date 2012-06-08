@@ -18,6 +18,22 @@ when "lucid"
   include_recipe "libxt"
 
   packages |= %w/libmagickcore2/
+when "precise"
+  include_recipe "imagemagick-common"
+  include_recipe "libbz2"
+  include_recipe "libfontconfig"
+  include_recipe "libfreetype"
+  include_recipe "libgomp"
+  include_recipe "libjasper"
+  include_recipe "liblcms"
+  include_recipe "liblqr"
+  include_recipe "libltdl"
+  include_recipe "libpng"
+  include_recipe "libtiff"
+  include_recipe "libxext"
+  include_recipe "libxml2"
+
+  packages |= %w/libmagickcore4/
 end
 
 packages.each do |pkg|
